@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Assignment - 4</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="title-heading">YAV</h1>
+        </div>
+        <div>
+            <div class="booking-section">
+                <h2>Book a Call</h2>
+                <p>Book a call slot and our representative will call you within 1 hr of selected time slot</p>
+                <form id="form">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email"><br>
+                    <label for="number">Number:</label><br>
+                    <input type="number" id="number"><br>
+                    <label>Time for Call:</label><br>
+                    <div class="call-timing">
+                        <input type="date" id="date" />
+                        <input type="time" id="time" />
+                    </div>
+                    <button type="submit" id="submit-button" >Get a Call </button>
+                  </form>
+            </div>
+        </div>
+        <div class="search-box">
+            <input />
+            <input />
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let form = document.getElementById('form');
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            console.log(name)
+            let email = document.getElementById('email').value;
+            console.log(email)
+            let number = document.getElementById('number').value;
+            console.log(number)
+            let date = document.getElementById('date').value
+            console.log(date);
+            let time = document.getElementById('time').value
+            console.log(date);
+        })
+    </script>
+</body>
+</html>

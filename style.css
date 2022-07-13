@@ -1,0 +1,93 @@
+        /* --------------container--------------- */
+
+        .container{
+            background-color: rgb(160, 71, 244);
+            height:100vh;
+            display: flex;
+        }
+
+        /* -----------title------section-------- */
+        .title-heading{
+
+            text-align: center;
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-left: 7rem;
+            margin-right: 12rem;
+        }
+
+
+
+
+        /* ------------------BOOKING SECTION --------------- */
+
+
+        .booking-section{
+            border: 0.25rem solid orange;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            width: 40rem;
+        }
+        .booking-section p{
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .booking-section h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .booking-section input {
+            width: 100%;
+            height: 1.2rem;
+            margin-bottom: 1rem;
+            margin-top: 0.3rem;
+            outline: none;
+        }
+        .booking-section label{
+            font-size: 1.2rem;
+        }
+        .call-timing {
+            display: flex;
+            justify-content: space-around;
+        }
+        .call-timing input{
+            width: 19.5rem;
+        }
+        #submit-button{
+            font-size: 1rem;
+            padding-bottom: 1.2rem;
+            width: 100%;
+            height: 2rem;
+            background-color: orange;
+            border: 0.5rem solid orange;
+            border-radius: 0.5rem;
+            color: antiquewhite;
+        }
+        #submit-button:hover{
+            background-color: antiquewhite;
+
+            color: rgb(160, 71, 244);
+            border: 0.5rem solid antiquewhite;
+            cursor: pointer;
+        }
+
+
+        /* --------------- Search box section-------------- */
+        .search-box{
+            display: flex;
+
+            margin-left: 8rem;
+            margin-top: 2.5rem;
+        }
+        .search-box input{
+            width: 6rem;
+            height: 1.2rem;
+            margin-left: 0.5rem;
+            border: 0.1rem solid orange;
+            border-radius: 0.5rem;
+            outline: none;
+
+        }

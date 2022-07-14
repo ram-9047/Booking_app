@@ -1,8 +1,13 @@
+        /* ----------------Top ---- BOX---------- */
+        .box{
+            height: 100vh;
+            background-color: rgb(160, 71, 244);
+            /* padding: 0 4rem; */
+        }
         /* --------------container--------------- */
 
         .container{
-            background-color: rgb(160, 71, 244);
-            height:100vh;
+            /* height:100vh; */
             display: flex;
         }
 
@@ -90,4 +95,20 @@
             border-radius: 0.5rem;
             outline: none;
 
+        }
+
+        .display_post{
+            margin-left: 2rem;
+            margin-top: 2rem;
+            /* height: 10rem; */
+            width: 50rem;
+            /* align-content: center; */
+            align-items: center;
+            background-color: aliceblue;
+            padding: 1.2rem 1.5rem;
+            border: 0.2rem solid salmon;
+            border-radius: 0.7rem;
+        }
+        .display_post h3{
+            /* padding: 0.5rem 0.5rem; */
         }

@@ -1,16 +1,20 @@
 let form = document.getElementById("form");
 
-// console.log(userInfo);
 window.addEventListener("DOMContentLoaded", () => {
   displayUser();
 });
 
+form.addEventListener("submit", (e) => {
+  console.log(e, "event");
+  handlePost(e);
+});
+
 async function displayUser() {
   let response = await axios.get(
-    "https://crudcrud.com/api/14aa5d8e9bd744d29fa0f916d5816a62/userData"
+    "https://crudcrud.com/api/3bffd9c54adb4dab8939d1190e5825df/userData"
   );
   let temp = await response.data;
-  console.log(temp);
+  console.log(temp, "data from fetch");
   let displayUserInfo = document.querySelector(".display_post");
   displayUserInfo.innerHTML = "";
   temp.forEach((el) => {
@@ -21,31 +25,31 @@ async function displayUser() {
     let date = document.createElement("h3");
     let time = document.createElement("h3");
 
-    let div1 = document.createElement("div")
-    let div2 = document.createElement("div")
+    let div1 = document.createElement("div");
+    let div2 = document.createElement("div");
     let edit_btn = document.createElement("button");
     let del_btn = document.createElement("button");
+    del_btn.innerText = "Delete";
 
+    li.id = el._id;
     name.textContent = `Name : ${el.name}`;
     email.textContent = `Email-id : ${el.email}`;
     number.textContent = `Phone Number : ${el.number}`;
     date.textContent = `Date : ${el.date}`;
     time.textContent = `Time : ${el.time}`;
+    del_btn.addEventListener("click", () => handleDelete(el._id));
 
     li.append(name);
     li.append(email);
     li.append(number);
     li.append(date);
     li.append(time);
+    li.append(del_btn);
+    // div1.appendChild(li)
     displayUserInfo.appendChild(li);
+    // displayUserInfo.appendChild(div2)
   });
 }
-
-// console.log(form)
-form.addEventListener("submit", (e) => {
-  console.log(e, "event");
-  handlePost(e);
-});
 
 function getValue(name) {
   return document.getElementById(name).value;
@@ -69,7 +73,7 @@ function handlePost(event) {
 
   axios
     .post(
-      "https://crudcrud.com/api/14aa5d8e9bd744d29fa0f916d5816a62/userData",
+      "https://crudcrud.com/api/3bffd9c54adb4dab8939d1190e5825df/userData",
       data
     )
     .then(function sucess(msg) {
@@ -84,6 +88,17 @@ function handlePost(event) {
 
 ///// -----------DELETE USER----------
 
-function handleDelete(id) {
-  axios.delete("");
+async function handleDelete(id) {
+  console.log(id, "handle del");
+  await axios
+    .delete(
+      `https://crudcrud.com/api/3bffd9c54adb4dab8939d1190e5825df/userData/${id}`
+    )
+    .then(function sucess(msg) {
+      console.log(msg);
+      displayUser();
+    })
+    .catch(function failure() {
+      console.log(msg);
+    });
 }

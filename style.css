@@ -61,7 +61,8 @@
         .call-timing input{
             width: 19.5rem;
         }
-        #submit-button{
+        #submit-button,
+        #update-button{
             font-size: 1rem;
             padding-bottom: 1.2rem;
             width: 100%;
@@ -77,6 +78,10 @@
             color: rgb(160, 71, 244);
             border: 0.5rem solid antiquewhite;
             cursor: pointer;
+        }
+        #update-button{
+            /* visibility: hidden; */
+            display: none;
         }
 
 
